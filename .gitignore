@@ -1,3 +1,27 @@
+# 添加提交忽略文件
+target/
+.idea/
+*.iml
+/**/.iml
+/**/.DS_Store
+/**/.settings/
+/**/.project
+/**/.classpath
+**/rebel.xml
+**/rebel-remote.xml
+/**/.externalToolBuilders/
+/**/.yml
+/**/rebel-remote.xml
+/**/rebel.xml
+application.properties
+.gitignore
+rebel.xml
+rebel-remote.xml
+#test/
+
+
+
+
 # Compiled class file
 *.class
 
