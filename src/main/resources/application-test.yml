@@ -1,0 +1,19 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.107.84.118:3306/test?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    username: panhongshan
+    password: panhongshan
+
+#mybatis日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+# 测试读取内容
+test:
+  name: panhonshan
+  sex: boy
+

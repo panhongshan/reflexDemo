@@ -5,6 +5,7 @@ import com.atguigu.mybatis_plus.entity.*;
 import com.atguigu.mybatis_plus.service.ReflectionService;
 import com.atguigu.mybatis_plus.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,6 +41,21 @@ public class TestController {
     @Autowired
     private UserService userService;
 
+
+
+    @Value("${test.name}")
+    String name ;
+    @Value("${test.sex}")
+    String sex ;
+
+    @GetMapping("/test3")
+    public Object test3(){
+        Map<String, Object> map=new HashMap<>();
+        map.put("name",name);
+        map.put("sex",sex);
+        return map;
+    }
+
     /**
      * 成功的！！！
      * 真牛逼！！！
@@ -50,6 +66,7 @@ public class TestController {
     @GetMapping("/test2")
     public String test2() throws Exception {
 
+//        userService.getOne()
         long startTime = System.currentTimeMillis();
         String json = "{\n" +
                 "\n" +
